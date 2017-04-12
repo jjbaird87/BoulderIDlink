@@ -14,8 +14,8 @@ namespace BM.DataAccess
         public Member GetMemberByMemberId(string memberNumber)
         {
             var connection = new SqlConnection(_connectionString);
-            var command = new SqlCommand("SELECT FirstName, LastName FROM Member WHERE MemberNumber = @MemberNumber", connection);
-            command.Parameters.Add("@MemberNumber", SqlDbType.VarChar).Value = memberNumber;
+            var command = new SqlCommand("SELECT First, Last, Photo FROM Member WHERE Acct = @Acct", connection);
+            command.Parameters.Add("@Acct", SqlDbType.VarChar).Value = memberNumber;
             try
             {
                 connection.Open();
@@ -24,7 +24,7 @@ namespace BM.DataAccess
                     return null;
                 while (reader.Read())
                 {
-                    var member = new Member { FirstName = reader["FirstName"].ToString(), LastName = reader["LastName"].ToString(), MemberNumber = memberNumber};
+                    var member = new Member { FirstName = reader["First"].ToString(), LastName = reader["Last"].ToString(), MemberNumber = memberNumber};
                     return member;
                 }
                 return null;

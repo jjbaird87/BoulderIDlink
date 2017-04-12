@@ -33,15 +33,12 @@ namespace BM.Boulder.IDlinkInterface.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("5")]
         public int TimeToWaitAfterIdentification {
             get {
                 return ((int)(this["TimeToWaitAfterIdentification"]));
-            }
-            set {
-                this["TimeToWaitAfterIdentification"] = value;
             }
         }
     }
