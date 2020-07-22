@@ -5,12 +5,69 @@
     <Setting Name="Connection" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Server=.\SQLEXPRESS;Database=CTCPeople;Trusted_Connection=True;&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Server=.\SQLEXPRESS1;Database=TimeKeeperSample;Trusted_Connection=True;&lt;/ConnectionString&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Server=.\SQLEXPRESS;Database=CTCPeople;Trusted_Connection=True;</Value>
+      <Value Profile="(Default)">Server=.\SQLEXPRESS1;Database=TimeKeeperSample;Trusted_Connection=True;</Value>
     </Setting>
     <Setting Name="TimeToWaitAfterIdentification" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="EnableTCPListener" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ListeningPort" Type="System.UInt16" Scope="User">
+      <Value Profile="(Default)">11020</Value>
+    </Setting>
+    <Setting Name="Key1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Track</Value>
+    </Setting>
+    <Setting Name="Key2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Spa</Value>
+    </Setting>
+    <Setting Name="Key3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Pool</Value>
+    </Setting>
+    <Setting Name="Key4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Gym</Value>
+    </Setting>
+    <Setting Name="Key5" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Showers</Value>
+    </Setting>
+    <Setting Name="Key6" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Golf</Value>
+    </Setting>
+    <Setting Name="Key7" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Yoga</Value>
+    </Setting>
+    <Setting Name="Key8" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Zumba</Value>
+    </Setting>
+    <Setting Name="Key9" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Key10" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Key11" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Key12" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Key13" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Key14" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Key15" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Key16" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LocalIP" Type="System.String" Scope="User">
+      <Value Profile="(Default)">192.168.1.82</Value>
     </Setting>
   </Settings>
 </SettingsFile>

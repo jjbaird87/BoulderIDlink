@@ -12,7 +12,7 @@ namespace BM.Boulder.IDlinkInterface.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.1.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.3.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -26,7 +26,7 @@ namespace BM.Boulder.IDlinkInterface.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Server=.\\SQLEXPRESS;Database=CTCPeople;Trusted_Connection=True;")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Server=.\\SQLEXPRESS1;Database=TimeKeeperSample;Trusted_Connection=True;")]
         public string Connection {
             get {
                 return ((string)(this["Connection"]));
@@ -39,6 +39,234 @@ namespace BM.Boulder.IDlinkInterface.Properties {
         public int TimeToWaitAfterIdentification {
             get {
                 return ((int)(this["TimeToWaitAfterIdentification"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool EnableTCPListener {
+            get {
+                return ((bool)(this["EnableTCPListener"]));
+            }
+            set {
+                this["EnableTCPListener"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("11020")]
+        public ushort ListeningPort {
+            get {
+                return ((ushort)(this["ListeningPort"]));
+            }
+            set {
+                this["ListeningPort"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Track")]
+        public string Key1 {
+            get {
+                return ((string)(this["Key1"]));
+            }
+            set {
+                this["Key1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Spa")]
+        public string Key2 {
+            get {
+                return ((string)(this["Key2"]));
+            }
+            set {
+                this["Key2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Pool")]
+        public string Key3 {
+            get {
+                return ((string)(this["Key3"]));
+            }
+            set {
+                this["Key3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Gym")]
+        public string Key4 {
+            get {
+                return ((string)(this["Key4"]));
+            }
+            set {
+                this["Key4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Showers")]
+        public string Key5 {
+            get {
+                return ((string)(this["Key5"]));
+            }
+            set {
+                this["Key5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Golf")]
+        public string Key6 {
+            get {
+                return ((string)(this["Key6"]));
+            }
+            set {
+                this["Key6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Yoga")]
+        public string Key7 {
+            get {
+                return ((string)(this["Key7"]));
+            }
+            set {
+                this["Key7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Zumba")]
+        public string Key8 {
+            get {
+                return ((string)(this["Key8"]));
+            }
+            set {
+                this["Key8"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Key9 {
+            get {
+                return ((string)(this["Key9"]));
+            }
+            set {
+                this["Key9"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Key10 {
+            get {
+                return ((string)(this["Key10"]));
+            }
+            set {
+                this["Key10"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Key11 {
+            get {
+                return ((string)(this["Key11"]));
+            }
+            set {
+                this["Key11"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Key12 {
+            get {
+                return ((string)(this["Key12"]));
+            }
+            set {
+                this["Key12"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Key13 {
+            get {
+                return ((string)(this["Key13"]));
+            }
+            set {
+                this["Key13"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Key14 {
+            get {
+                return ((string)(this["Key14"]));
+            }
+            set {
+                this["Key14"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Key15 {
+            get {
+                return ((string)(this["Key15"]));
+            }
+            set {
+                this["Key15"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Key16 {
+            get {
+                return ((string)(this["Key16"]));
+            }
+            set {
+                this["Key16"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("192.168.1.82")]
+        public string LocalIP {
+            get {
+                return ((string)(this["LocalIP"]));
+            }
+            set {
+                this["LocalIP"] = value;
             }
         }
     }

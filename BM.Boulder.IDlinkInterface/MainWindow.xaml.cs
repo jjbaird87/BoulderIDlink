@@ -1,4 +1,5 @@
 ﻿using BM.Boulder.IDlinkInterface.Controls;
+using BM.Boulder.IDlinkInterface.Properties;
 
 namespace BM.Boulder.IDlinkInterface
 {
@@ -13,6 +14,14 @@ namespace BM.Boulder.IDlinkInterface
             InitializeComponent();
             _userInputPage = new UserInputPage(this);
             Content = _userInputPage;
+
+            Closing += MainWindow_Closing;
+        }
+
+        private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (Settings.Default.EnableTCPListener)
+                Listener.StopServer();
         }
 
         public void SelectPageUserInputPage()
