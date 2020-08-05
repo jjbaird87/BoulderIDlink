@@ -41,14 +41,14 @@ namespace BM.Boulder.IDlinkInterface.Controls
             Dispatcher.BeginInvoke(DispatcherPriority.Normal,
                 (Action) (() =>
                     {
-                        if (_mainForm.Content != this)
+                        if (!Equals(_mainForm.Content, this))
                         {
                             Thread.Sleep(Settings.Default.TimeToWaitAfterIdentification);
                         }
                         var userId = ((MorphoTcpSocketListener.ApplicationEventArguments) e).UserId;
-                        var lastThree = userId.Substring(userId.Length - 3, 3);
-                        userId = userId.Remove(userId.Length - 3, 3);
-                        userId = userId.PadLeft(4, '0') + "-" + lastThree;
+                        //var lastThree = userId.Substring(userId.Length - 3, 3);
+                        //userId = userId.Remove(userId.Length - 3, 3);
+                        //userId = userId.PadLeft(4, '0') + "-" + lastThree;
                         ProcessUser(userId,
                             Convert.ToByte(((MorphoTcpSocketListener.ApplicationEventArguments) e)
                                 .TimeAndAttendanceStatus));
