@@ -25,34 +25,31 @@ namespace BM.Boulder.IDlinkInterface.Controls
             TbMemberId.Focus();
 
             if (Settings.Default.EnableTCPListener)
-            {
-                if (!Listener.Started)
+            {          
+                if (!UDPListener.ServerStarted)
                 {
-                    Listener.StartServer();
+                    UDPListener.StartServer();
                 }
             }
 
-            Listener.OnRulesCommunicationHandler += Listener_OnRulesCommunicationHandler;
-
+            UDPListener.UserDataReceived += UDPListener_UserDataReceived; ;
         }
 
-        private void Listener_OnRulesCommunicationHandler(object sender, EventArgs e)
+        private void UDPListener_UserDataReceived(object sender, UserReceivedEventArgs e)
         {
             Dispatcher.BeginInvoke(DispatcherPriority.Normal,
-                (Action) (() =>
+                (Action)(() =>
+                {
+                    if (!Equals(_mainForm.Content, this))
                     {
-                        if (!Equals(_mainForm.Content, this))
-                        {
-                            Thread.Sleep(Settings.Default.TimeToWaitAfterIdentification);
-                        }
-                        var userId = ((MorphoTcpSocketListener.ApplicationEventArguments) e).UserId;
-                        //var lastThree = userId.Substring(userId.Length - 3, 3);
-                        //userId = userId.Remove(userId.Length - 3, 3);
-                        //userId = userId.PadLeft(4, '0') + "-" + lastThree;
-                        ProcessUser(userId,
-                            Convert.ToByte(((MorphoTcpSocketListener.ApplicationEventArguments) e)
-                                .TimeAndAttendanceStatus));
+                        Thread.Sleep(Settings.Default.TimeToWaitAfterIdentification);
                     }
+                    var userId = e.CredentialID;
+                    //var lastThree = userId.Substring(userId.Length - 3, 3);
+                    //userId = userId.Remove(userId.Length - 3, 3);
+                    //userId = userId.PadLeft(4, '0') + "-" + lastThree;
+                    ProcessUser(userId, e.TaStatus);
+                }
                 ));
         }
 
@@ -72,8 +69,8 @@ namespace BM.Boulder.IDlinkInterface.Controls
             _backgroundWorker.DoWork += (o, args) =>
             {
                 var dataAccess = new CtcData(Settings.Default.Connection);
-                member = dataAccess.GetMemberByMemberId(args.Argument.ToString());
-                if (action != null)
+                member = dataAccess.GetMemberByMemberId(args.Argument.ToString());                
+                if (member != null && action != null)
                     member.Action = GetAction((byte)action);
             };
             _backgroundWorker.RunWorkerCompleted += (o, args) =>

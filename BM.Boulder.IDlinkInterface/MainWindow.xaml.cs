@@ -21,7 +21,7 @@ namespace BM.Boulder.IDlinkInterface
         private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             if (Settings.Default.EnableTCPListener)
-                Listener.StopServer();
+                UDPListener.StopServer();
         }
 
         public void SelectPageUserInputPage()

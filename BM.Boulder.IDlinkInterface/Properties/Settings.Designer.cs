@@ -12,7 +12,7 @@ namespace BM.Boulder.IDlinkInterface.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.3.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -20,16 +20,6 @@ namespace BM.Boulder.IDlinkInterface.Properties {
         public static Settings Default {
             get {
                 return defaultInstance;
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Server=.\\SQLEXPRESS1;Database=TimeKeeperSample;Trusted_Connection=True;")]
-        public string Connection {
-            get {
-                return ((string)(this["Connection"]));
             }
         }
         
@@ -258,15 +248,37 @@ namespace BM.Boulder.IDlinkInterface.Properties {
             }
         }
         
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Server=.;Database=BiometricIntegration;Trusted_Connection=True;")]
+        public string Connection {
+            get {
+                return ((string)(this["Connection"]));
+            }
+        }
+        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("192.168.1.82")]
+        [global::System.Configuration.DefaultSettingValueAttribute("192.168.1.26")]
         public string LocalIP {
             get {
                 return ((string)(this["LocalIP"]));
             }
             set {
                 this["LocalIP"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool TimeAndAttendanceEnabled {
+            get {
+                return ((bool)(this["TimeAndAttendanceEnabled"]));
+            }
+            set {
+                this["TimeAndAttendanceEnabled"] = value;
             }
         }
     }

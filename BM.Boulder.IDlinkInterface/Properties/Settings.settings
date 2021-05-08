@@ -2,13 +2,6 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BM.Boulder.IDlinkInterface.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="Connection" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Server=.\SQLEXPRESS1;Database=TimeKeeperSample;Trusted_Connection=True;&lt;/ConnectionString&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Server=.\SQLEXPRESS1;Database=TimeKeeperSample;Trusted_Connection=True;</Value>
-    </Setting>
     <Setting Name="TimeToWaitAfterIdentification" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">5</Value>
     </Setting>
@@ -66,8 +59,18 @@
     <Setting Name="Key16" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="Connection" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Server=.;Database=BiometricIntegration;Trusted_Connection=True;&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Server=.;Database=BiometricIntegration;Trusted_Connection=True;</Value>
+    </Setting>
     <Setting Name="LocalIP" Type="System.String" Scope="User">
-      <Value Profile="(Default)">192.168.1.82</Value>
+      <Value Profile="(Default)">192.168.1.26</Value>
+    </Setting>
+    <Setting Name="TimeAndAttendanceEnabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
 </SettingsFile>
